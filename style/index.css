@@ -99,5 +99,65 @@
 .teamated {
     background-color: white;
     max-width: 30%;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 0 2rem 2rem 2rem;
+    position: relative;
+}
+
+.teamated-info {
+    margin-top: 5rem;
+}
+
+.teamated-ava {
+    position: absolute;
+    border-radius: 50%;
+    background-image: url('../static/img/323.jpg');
+    width: 15vw;
+    max-width: 150px;
+    height: 15vw;
+    max-height: 150px;
+    top: -5vw;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.mtop-5 {
+    margin-top: 5rem;
+}
+
+.project > .row {
+    min-height: 250px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.project > .row > div {
+    padding: 0;
+}
+
+#first-project {
+    background-color: #15093a45;
+    background-image: url(../static/img/first.jfif);
+    background-size: cover;
+    
+    height: 100%;
+}
+
+#second-project {
+    height: 100%;
+    background-image: url('../static/img/second.jfif');
+    background-size: cover;
+}
+
+#third-project {
+    height: 100%;
+    background-image: url('../static/img/third.jfif');
+    background-size: cover;
+}
+
+#fourth-project {
+    height: 100%;
+    background-image: url('../static/img/fourth.jfif');
+    background-size: cover;
 }
