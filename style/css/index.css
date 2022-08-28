@@ -8,6 +8,25 @@
   justify-content: center;
 }
 
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.btn-red {
+  background-color: red;
+  border: 0;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .main {
   background-image: url("../../static/img/3.jpg");
   height: 90vh;
@@ -17,19 +36,25 @@
 }
 .main .main-data {
   margin: auto;
-  width: 35%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 1s;
 }
 .main .main-data .title {
   color: white;
   text-align: center;
   position: relative;
+  width: 35%;
 }
 .main .main-data .title .scop-top {
   position: absolute;
   top: -8px;
   left: -8px;
+  animation-delay: 0.1s;
 }
 .main .main-data .title h1 {
   font-size: 3rem;
@@ -38,10 +63,31 @@
   position: absolute;
   bottom: -8px;
   right: -8px;
+  animation-delay: 0.1s;
 }
 .main .main-data .main-btn {
-  margin: auto;
   margin-top: 3rem;
+}
+
+.about {
+  padding: 5%;
+}
+.about img {
+  width: 100%;
+  max-height: 500px;
+}
+.about .block-desc {
+  padding-left: 5%;
+  margin: auto;
+}
+.about .block-desc li {
+  color: red;
+}
+.about .block-desc li span {
+  color: black;
+}
+.about .block-desc ::marker {
+  top: 50px;
 }
 
 .service {
@@ -79,6 +125,112 @@
   background-color: white;
   max-width: 30%;
   padding: 5rem 2rem 2rem 2rem;
+}
+.team .teamated .teamated-info .name {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.team .teamated .teamated-info .status {
+  font-size: 18px;
+}
+
+.project [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+}
+.project [class*=col-] .block-project {
+  min-height: 300px;
+  background-size: cover;
+  padding: 5%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+.project [class*=col-] .block-project span {
+  z-index: 2;
+  display: block;
+  color: white;
+}
+.project [class*=col-] .block-project .project-name {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 2%;
+}
+.project [class*=col-] .block-project .projec-place {
+  padding: 2% 0;
+  font-size: 14px;
+  border-bottom: solid 1px #6c757d;
+}
+.project [class*=col-] .block-project .project-width {
+  padding-top: 2%;
+  font-size: 16px;
+}
+.project [class*=col-] #first-project {
+  background-image: url("../../static/img/first.jpg");
+}
+.project [class*=col-] #second-project {
+  background-image: url("../../static/img/second.jpg");
+}
+.project [class*=col-] #third-project {
+  background-image: url("../../static/img/third.jpg");
+}
+.project [class*=col-] #fourth-project {
+  background-image: url("../../static/img/fourth.jpg");
+}
+.project [class*=col-]:after {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.work {
+  padding: 5%;
+}
+.work .data-form [class*=form-] input {
+  margin-top: 50px;
+  height: 50px;
+  border-radius: 0;
+  border: solid 1px #dcdfe3;
+  padding-left: 15px;
+}
+.work .data-form [class*=form-] button {
+  margin-top: 20px;
+  display: block;
+}
+.work .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #131D3B;
+  padding: 5%;
+  color: white;
+}
+.footer .row .block-contacts {
+  padding-left: 105px;
+}
+.footer .row .block-contacts .adres {
+  max-width: 50%;
+  font-size: 16px;
+  padding-bottom: 5%;
+}
+.footer .row .block-contacts .contacts {
+  font-size: 14px;
+}
+.footer .row .links span {
+  display: block;
+  padding-bottom: 1%;
 }
 
 /*# sourceMappingURL=index.css.map */
