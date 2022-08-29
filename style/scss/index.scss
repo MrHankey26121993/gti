@@ -183,6 +183,10 @@
         position: relative;
         .teamated-info {
             padding: 5rem 2rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
             .name {
                 font-size: 24px;
                 font-weight: 600;
@@ -190,6 +194,10 @@
             }
             .status {
                 font-size: 18px;
+                padding-bottom: 10px;
+            }
+            .botton {
+                align-self: center;
             }
         }
     }
