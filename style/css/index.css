@@ -22,6 +22,29 @@
   font-weight: 500;
 }
 
+.btn-outline {
+  background-color: inherit;
+  border: 1px solid red;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.clr-black {
+  color: black;
+}
+
+.h1 {
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  line-height: 150%;
+  border-bottom: 1px solid black;
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -68,9 +91,22 @@
 .main .main-data .main-btn {
   margin-top: 3rem;
 }
+@media (max-width: 1000px) {
+  .main .main-data .title {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .main .main-data .title {
+    width: 80%;
+  }
+  .main .main-data .title h1 {
+    font-size: 2rem;
+  }
+}
 
 .about {
-  padding: 5%;
+  padding: 4rem;
 }
 .about img {
   width: 100%;
@@ -95,7 +131,12 @@
   background-image: url("../../static/img/4.jpg");
   background-position: center;
   background-size: cover;
-  padding: 5% 15% 5% 15%;
+  padding: 3rem 15% 3rem 15%;
+  background-position: top;
+}
+.service .h1 {
+  color: white;
+  border-bottom: 1px solid white;
 }
 .service .row {
   justify-content: space-between;
@@ -104,26 +145,44 @@
 }
 .service .row .service-info {
   background-color: white;
-  width: 240px;
-  height: 240px;
-  padding: 20px 20px 0 20px;
+  width: 250px;
+  height: 250px;
+  padding: 20px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.service .row .service-info .icon {
+  margin: auto;
+  height: 40%;
+  padding: 20px;
 }
 .service .row .service-info .desc {
   text-transform: uppercase;
   font-weight: bold;
+  height: 60%;
+  margin: auto;
 }
 
 .team {
-  background-color: #131D3B;
-  padding: 5% 0;
+  background-color: #131d3b;
+  padding: 3rem 0;
 }
 .team .section-title {
   color: white;
   text-align: center;
 }
+.team .h1 {
+  color: white;
+  border-bottom: 1px solid white;
+}
 .team .teamated {
   background-color: white;
   max-width: 30%;
+  position: relative;
+}
+.team .teamated .teamated-info {
   padding: 5rem 2rem 2rem 2rem;
 }
 .team .teamated .teamated-info .name {
@@ -135,51 +194,70 @@
   font-size: 18px;
 }
 
-.project [class*=col-] {
+.project {
+  padding: 3rem 5% 3rem 5%;
+}
+.project h1 {
+  color: black;
+  text-align: center;
+}
+.project .row {
+  margin: auto;
+}
+.project .row [class*=col-] {
   padding-right: 0;
   padding-left: 0;
   position: relative;
 }
-.project [class*=col-] .block-project {
+.project .row [class*=col-] .block-project {
   min-height: 300px;
   background-size: cover;
   padding: 5%;
   z-index: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.project [class*=col-] .block-project span {
+.project .row [class*=col-] .block-project .block-project-text {
   z-index: 2;
+}
+.project .row [class*=col-] .block-project .block-project-text span {
   display: block;
   color: white;
 }
-.project [class*=col-] .block-project .project-name {
+.project .row [class*=col-] .block-project .block-project-text .project-name {
   font-size: 20px;
   font-weight: 500;
   padding-bottom: 2%;
 }
-.project [class*=col-] .block-project .projec-place {
+.project .row [class*=col-] .block-project .block-project-text .projec-place {
   padding: 2% 0;
   font-size: 14px;
   border-bottom: solid 1px #6c757d;
 }
-.project [class*=col-] .block-project .project-width {
+.project .row [class*=col-] .block-project .block-project-text .project-width {
   padding-top: 2%;
   font-size: 16px;
 }
-.project [class*=col-] #first-project {
+.project .row [class*=col-] .block-project .block-project-btn {
+  z-index: 2;
+  display: none;
+  margin: auto;
+}
+.project .row [class*=col-] #first-project {
   background-image: url("../../static/img/first.jpg");
 }
-.project [class*=col-] #second-project {
+.project .row [class*=col-] #second-project {
   background-image: url("../../static/img/second.jpg");
 }
-.project [class*=col-] #third-project {
+.project .row [class*=col-] #third-project {
   background-image: url("../../static/img/third.jpg");
 }
-.project [class*=col-] #fourth-project {
+.project .row [class*=col-] #fourth-project {
   background-image: url("../../static/img/fourth.jpg");
 }
-.project [class*=col-]:after {
+.project .row [class*=col-]:after {
   content: "";
   background: rgba(0, 0, 0, 0.7);
   display: block;
@@ -190,9 +268,12 @@
   left: 0;
   z-index: 1;
 }
+.project .row [class*=col-]:hover .block-project .block-project-btn {
+  display: block;
+}
 
 .work {
-  padding: 5%;
+  padding: 3rem;
 }
 .work .data-form [class*=form-] input {
   margin-top: 50px;
@@ -213,8 +294,8 @@
 }
 
 .footer {
-  background-color: #131D3B;
-  padding: 5%;
+  background-color: #131d3b;
+  padding: 3rem;
   color: white;
 }
 .footer .row .block-contacts {
@@ -231,6 +312,58 @@
 .footer .row .links span {
   display: block;
   padding-bottom: 1%;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .project {
+    padding: 4rem 0 0 0;
+  }
+  .project .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .team .d-flex {
+    flex-direction: column;
+  }
+  .team .teamated {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .team .teamated .teamated-info {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .footer {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .footer .row .block-contacts {
+    padding-left: 0;
+  }
+  .footer .row .block-contacts .adres {
+    max-width: 100%;
+  }
+  .footer .row .block-contacts .contacts {
+    padding-bottom: 5%;
+  }
+  .footer .row .links {
+    display: flex;
+    justify-content: space-between;
+  }
+  .work {
+    padding: 3rem 0;
+  }
+}
+@media (min-width: 600px) {
+  .team .teamated {
+    max-width: 30%;
+  }
+  .team .teamated .teamated-info {
+    padding: 0 1rem 1rem 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
