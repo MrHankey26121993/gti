@@ -14,10 +14,60 @@ body {
   font-family: "Ubuntu";
   overflow-x: hidden;
 }
+body button:active,
+body button:focus {
+  outline: none !important;
+}
+body .modal-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(19, 29, 59, 0.8509803922);
+  z-index: 1500;
+  overflow: hidden;
+}
+body .modal-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1501;
+}
+body .modal-wrap .modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+}
+body .modal-wrap .modal-container .modal-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1502;
+  height: 100%;
+}
+body .modal-wrap .modal-container .modal-content .modal-body {
+  background-color: #fff;
+  max-width: 500px;
+  height: 500px;
+  margin: auto;
+  margin-top: 10vw;
+}
+body .modal-wrap .modal-container .modal-content .modal-body .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+}
 
 .navbar {
   padding: 0;
   justify-content: space-between !important;
+}
+.navbar .navbar-toggler-custom {
+  display: none;
 }
 .navbar .navbar-brand {
   margin-right: 0;
@@ -227,6 +277,9 @@ body {
 .team .teamated .teamated-info * {
   flex: 1 1;
 }
+.team .teamated .teamated-ava {
+  border: 3px solid grey;
+}
 
 .project {
   padding: 3rem 5% 3rem 5%;
@@ -348,13 +401,95 @@ body {
   padding-bottom: 1%;
 }
 
+.menu-mob {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(19, 29, 59, 0.8509803922);
+  overflow: hidden;
+}
+.menu-mob ul {
+  text-align: center;
+  margin-top: 180px;
+}
+.menu-mob ul li a {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  position: relative;
+  height: 60px;
+  outline: none;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   .navbar img {
     width: 70%;
     height: auto;
   }
-  .navbar .navbar-toggler {
+  .navbar .navbar-toggler-custom {
     display: block;
+    position: fixed;
+    right: 20px;
+    background-color: white;
+    z-index: 51;
+    width: 60px;
+    height: 40px;
+    line-height: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+  }
+  .navbar .navbar-toggler-custom .sandwich {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
+  }
+  .navbar .navbar-toggler-custom .sandwich [class*=sw-] {
+    position: relative;
+    width: 28px;
+    height: 3px;
+    background: #131d3b;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-transition: -webkit-transform 0.5s, top 0.2s;
+    transition: transform 0.5s, top 0.2s;
+    display: block;
+  }
+  .navbar .navbar-toggler-custom .sandwich .sw-top {
+    top: 0;
+    transition: transform 0.5s, top 0.2s;
+  }
+  .navbar .navbar-toggler-custom .sandwich .sw-middle {
+    top: 6.6px;
+    transition: transform 0.5s, top 0.2s;
+  }
+  .navbar .navbar-toggler-custom .sandwich .sw-bottom {
+    top: 13.5px;
+    transition: all 0.5s;
+  }
+  .navbar .navbar-toggler-custom .active .sw-top {
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+  .navbar .navbar-toggler-custom .active .sw-middle {
+    top: 6.6px;
+    transform: rotate(45deg);
+  }
+  .navbar .navbar-toggler-custom .active .sw-bottom {
+    top: 0;
+    opacity: 0;
+    transform: rotate(180deg);
   }
   .project {
     padding: 4rem 0 0 0;

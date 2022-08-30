@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/plugin/animate.css">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/css/index.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../static/plugin/animate.css">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet"
+            href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../style/css/index.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div class="container">
-        <nav class="navbar navbar-expand">
-            <a class="navbar-brand" href="#">
-                <img src="../static/img/logo.png" height="85" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="container">
+            <nav class="navbar navbar-expand">
+                <a class="navbar-brand" href="#">
+                    <img src="../static/img/logo.png" height="85" alt="">
+                </a>
+                <button class="navbar-toggler-custom" type="button"
+                    data-toggle="collapse" data-target="#navbarsExample02"
+                    aria-controls="navbarsExample02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="sandwich">
+                        <span class="sw-top"></span>
+                        <span class="sw-middle"></span>
+                        <span class="sw-bottom"></span>
+                    </span>
+                </button>
 
-            <div class="d-none d-md-flex" id="navbarsExample02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Главная</span></a>
+                <div class="d-none d-md-flex" id="navbarsExample02">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Главная</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">О нас</a>
@@ -53,63 +61,79 @@
         <div class="main-data">
             <div class="title animated main-animated">
                 <div class="scop-top">
-                    <svg width="44" height="46" viewBox="0 0 44 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 45.0066V4H43.0993" stroke="#EC1C24" stroke-width="7.62914" />
-                    </svg>
+                    <svg width="44" height="46" viewBox="0 0 44 46" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 45.0066V4H43.0993" stroke="#EC1C24"
+                            stroke-width="7.62914" />
+                        </svg>
 
-                </div>
-                <h1>Газификация муниципальных и промышленных объектов
-                </h1>
-                <div class="scop-bottom"><svg width="43" height="45" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M39.0994 -3.00407e-05V41.0066H2.56896e-05" stroke="#EC1C24" stroke-width="7.62914" />
-                    </svg></div>
-
-
-
-            </div>
-            <div class="main-btn animated main-animated"><button class="btn-red">Узнать больше</button></div>
-        </div>
-
-
-
-    </div>
-
-    <div class="about container ">
-        <div class="row">
-            <div class="d-none col-md-6 d-md-flex animated animated-left"><img src="../static/img/2.jpg" alt="fdsfas" width="500" height="600"></div>
-            <div class="col-12 col-md-6 block-desc animated animated-right">
-                <div>
-                    <h1>
-                        ООО "Трансгаз Инжиниринг" комфорт и уют в каждом доме
+                    </div>
+                    <h1>Газификация муниципальных и промышленных объектов
                     </h1>
-                    <ul>
-                        <li class="animated animated-right-mob"><span>Компания специализируется в области
-                                строительно-монтажных работ по
-                                газоснабжению</span></li>
-                        <li class="animated animated-right-mob"><span>Больше 5 лет на рынке</span></li>
-                        <li class="animated animated-right-mob"><span>Является участником целевых
-                                федеральных,
-                                региональных, краевых программ по
-                                газификации
-                                сельских и населенных пунктов</span></li>
-                        <li class="animated animated-right-mob"><span>Больше десяти едениц техники</span></li>
-                    </ul>
+                    <div class="scop-bottom"><svg width="43" height="45"
+                            viewBox="0 0 43 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M39.0994 -3.00407e-05V41.0066H2.56896e-05"
+                                stroke="#EC1C24" stroke-width="7.62914" />
+                            </svg></div>
+
+
+
+                    </div>
+                    <div class="main-btn animated main-animated"><button
+                            class="btn-red">Узнать больше</button></div>
                 </div>
 
+
+
             </div>
-        </div>
-    </div>
 
-    <div class="service">
-        <h1 class="h1 animated animated-title">Услуги</h1>
-        <div class="row animated service-animated-list">
+            <div class="about container" id="about">
+                <div class="row">
+                    <div class="d-none col-md-6 d-md-flex animated
+                        animated-left"><img src="../static/img/2.jpg"
+                            alt="fdsfas" width="500" height="600"></div>
+                    <div class="col-12 col-md-6 block-desc animated
+                        animated-right">
+                        <div>
+                            <h1>
+                                ООО "Трансгаз Инжиниринг" комфорт и уют в каждом
+                                доме
+                            </h1>
+                            <ul>
+                                <li class="animated animated-right-mob"><span>Компания
+                                        специализируется в области
+                                        строительно-монтажных работ по
+                                        газоснабжению</span></li>
+                                <li class="animated animated-right-mob"><span>Больше
+                                        5 лет на рынке</span></li>
+                                <li class="animated animated-right-mob"><span>Является
+                                        участником целевых
+                                        федеральных,
+                                        региональных, краевых программ по
+                                        газификации
+                                        сельских и населенных пунктов</span></li>
+                                <li class="animated animated-right-mob"><span>Больше
+                                        десяти едениц техники</span></li>
+                            </ul>
+                        </div>
 
-            <div class="service-info animated animated-left-mob">
+                    </div>
+                </div>
+            </div>
 
-                <div class="icon">
-                    <svg width="49" height="47" viewBox="0
-                                0 49 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.4962 14.2065C21.6903 10.6263 18.1344
+            <div class="service" id="service">
+                <h1 class="h1 animated animated-title">Услуги</h1>
+                <div class="row animated service-animated-list">
+
+                    <div class="service-info animated animated-left-mob">
+
+                        <div class="icon">
+                            <svg width="49" height="47" viewBox="0
+                                0 49 47" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.4962 14.2065C21.6903 10.6263
+                                    18.1344
                                     8.378 14.5541 9.18388C10.9742 9.98975
                                     8.72597 13.5457 9.53184 17.1256C10.3377
                                     20.7058 13.8937 22.9541 17.4736
@@ -124,8 +148,9 @@
                                     10.9625 20.7075 13.1549 20.6384
                                     15.7914C20.5826 17.928 19.1143 19.7659
                                     17.0427 20.2926C16.7068 20.3699 16.3633
-                                    20.41 16.0189 20.4135L15.9817 20.4507Z" fill="#131D3B" />
-                        <path d="M46.5338 5.55159C46.2228 5.53866
+                                    20.41 16.0189 20.4135L15.9817 20.4507Z"
+                                    fill="#131D3B" />
+                                    <path d="M46.5338 5.55159C46.2228 5.53866
                                         45.926 5.68186 45.7428 5.93324L42.6997
                                         10.0557C41.9821 10.9893 40.6561 11.1902
                                         39.6938 10.5117C38.7362 9.80459 38.5322
@@ -247,17 +272,20 @@
                                         12.9369 44.1979 11.1539L46.3007
                                         8.29693C47.0277 10.549 46.4313 13.018
                                         44.7562 14.6903Z" fill="#131D3B" />
-                    </svg>
-                </div>
-                <div class="desc"><span>Строительно монтажные работы межпоселковых газопроводов</span>
-                </div>
-            </div>
-            <div class="service-info animated animated-left-mob">
-                <div class="icon">
-                    <svg width="49" height="49" viewBox="0 0 49
-                                        49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_214_28)">
-                            <path d="M24.0534 22.8059C26.5791
+                                    </svg>
+                                </div>
+                                <div class="desc"><span>Строительно монтажные
+                                        работы межпоселковых газопроводов</span>
+                                </div>
+                            </div>
+                            <div class="service-info animated
+                                animated-left-mob">
+                                <div class="icon">
+                                    <svg width="49" height="49" viewBox="0 0 49
+                                        49" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_214_28)">
+                                            <path d="M24.0534 22.8059C26.5791
                                                 22.8059 28.6265 20.7586 28.6265
                                                 18.2331C28.6265 15.7073 26.5791
                                                 13.66 24.0534 13.66C21.5312
@@ -271,8 +299,10 @@
                                                 21.0316 24.0534 21.0316C22.503
                                                 21.0316 21.2459 19.7742 21.2459
                                                 18.2241C21.2459 16.6737 22.5021
-                                                15.4167 24.0534 15.4167Z" fill="#131D3B" />
-                            <path d="M41.8864 44.4177C42.9617
+                                                15.4167 24.0534 15.4167Z"
+                                                fill="#131D3B" />
+                                                <path d="M41.8864
+                                                    44.4177C42.9617
                                                     43.2815 43.1249 41.5601
                                                     42.2835 40.242L31.6897
                                                     23.5298C34.6296 19.3029
@@ -358,22 +388,31 @@
                                                     41.1866C41.0531 41.5696
                                                     41.1165 42.028 41.0034
                                                     42.458Z" fill="#131D3B" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_214_28">
-                                <rect width="48" height="48" fill="white" transform="translate(0.5
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_214_28">
+                                                        <rect width="48"
+                                                            height="48"
+                                                            fill="white"
+                                                            transform="translate(0.5
                                                             0.5)" />
-                            </clipPath>
-                        </defs>
-                    </svg>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
 
-                </div>
-                <div class="desc"><span>Сооружение газораспределительных сетей в населенных пунктах</span></div>
-            </div>
-            <div class="service-info animated animated-left-mob">
-                <div class="icon">
-                    <svg width="43" height="49" viewBox="0 0 43 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M42.2634
+                                            </div>
+                                            <div class="desc"><span>Сооружение
+                                                    газораспределительных сетей
+                                                    в населенных пунктах</span></div>
+                                        </div>
+                                        <div class="service-info animated
+                                            animated-left-mob">
+                                            <div class="icon">
+                                                <svg width="43" height="49"
+                                                    viewBox="0 0 43 49"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M42.2634
                                                         23.2736L40.3546
                                                         22.4527V21.1476C40.3814
                                                         13.137 35.327 5.98973
@@ -497,158 +536,248 @@
                                                         21.1472V23.1254C38.3965
                                                         23.5219 38.6338 23.8809
                                                         38.9998 24.0351L40.9083
-                                                        24.8559V28.3866H40.9086Z" fill="#131D3B" />
-                    </svg>
+                                                        24.8559V28.3866H40.9086Z"
+                                                        fill="#131D3B" />
+                                                    </svg>
 
-                </div>
-                <div class="desc"><span>Проектирование и монтаж внутридомовых газопроводов</span></div>
-            </div>
-        </div>
+                                                </div>
+                                                <div class="desc"><span>Проектирование
+                                                        и монтаж внутридомовых
+                                                        газопроводов</span></div>
+                                            </div>
+                                        </div>
 
 
-    </div>
+                                    </div>
 
-    <div class="project">
-        <h1 class="h1 animated animated-title">Наши проекты</h1>
-        <div class="row container justify-content-center">
-            <div class="col-12 col-md-3 animated animated-left-mob">
-                <div id="first-project" class="block-project ">
-                    <div class="block-project-text"> <span class="project-name">Газопровод
-                            межпоселковый</span><span class="projec-place">с.Серга
-                            - с.Насадка
-                            Кунгурского района
-                            Пермского
-                            края</span><span class="project-width">14433
-                            метров</span></div>
-                    <div class="block-project-btn"><button class="btn-outline">Подробнее</button></div>
+                                    <div class="project" id="project">
+                                        <h1 class="h1 animated animated-title">Наши
+                                            проекты</h1>
+                                        <div class="row container
+                                            justify-content-center">
+                                            <div class="col-12 col-md-3 animated
+                                                animated-left-mob">
+                                                <div id="first-project"
+                                                    class="block-project ">
+                                                    <div
+                                                        class="block-project-text">
+                                                        <span
+                                                            class="project-name">Газопровод
+                                                            межпоселковый</span><span
+                                                            class="projec-place">с.Серга
+                                                            - с.Насадка
+                                                            Кунгурского района
+                                                            Пермского
+                                                            края</span><span
+                                                            class="project-width">14433
+                                                            метров</span></div>
+                                                    <div
+                                                        class="block-project-btn"><button
+                                                            class="btn-outline">Подробнее</button></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3 animated
+                                                animated-left-mob">
+                                                <div id="second-project"
+                                                    class="block-project ">
+                                                    <div
+                                                        class="block-project-text"><span
+                                                            class="project-name">Газификация
+                                                            жилого фонда</span><span
+                                                            class="projec-place">с.Черная-2</span><span
+                                                            class="project-width">8250
+                                                            метров</span></div>
+                                                    <div
+                                                        class="block-project-btn"><button
+                                                            class="btn-outline">Подробнее</button></div>
+                                                </div>
 
-                </div>
-            </div>
-            <div class="col-12 col-md-3 animated animated-left-mob">
-                <div id="second-project" class="block-project ">
-                    <div class="block-project-text"><span class="project-name">Газификация
-                            жилого фонда</span><span class="projec-place">с.Черная-2</span><span class="project-width">8250
-                            метров</span></div>
-                    <div class="block-project-btn"><button class="btn-outline">Подробнее</button></div>
-                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3 animated
+                                                animated-left-mob">
+                                                <div id="third-project"
+                                                    class="block-project ">
+                                                    <div
+                                                        class="block-project-text"><span
+                                                            class="project-name">Газопровод
+                                                            высокого давления</span><span
+                                                            class="projec-place">Соликамский
+                                                            городской округ</span><span
+                                                            class="project-width">61
+                                                            метров</span></div>
+                                                    <div
+                                                        class="block-project-btn"><button
+                                                            class="btn-outline">Подробнее</button></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3 animated
+                                                animated-left-mob">
+                                                <div id="fourth-project"
+                                                    class="block-project ">
+                                                    <div
+                                                        class="block-project-text"><span
+                                                            class="project-name">Распределительный
+                                                            газопровод</span><span
+                                                            class="projec-place">д.
+                                                            Большая Мось
+                                                            Фроловского
+                                                            сельского
+                                                            поселения</span><span
+                                                            class="project-width">14433
+                                                            метров</span></div>
+                                                    <div
+                                                        class="block-project-btn">
+                                                        <button
+                                                            class="btn-outline">Подробней</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-            </div>
-            <div class="col-12 col-md-3 animated animated-left-mob">
-                <div id="third-project" class="block-project ">
-                    <div class="block-project-text"><span class="project-name">Газопровод
-                            высокого давления</span><span class="projec-place">Соликамский
-                            городской округ</span><span class="project-width">61
-                            метров</span></div>
-                    <div class="block-project-btn"><button class="btn-outline">Подробнее</button></div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 animated animated-left-mob">
-                <div id="fourth-project" class="block-project ">
-                    <div class="block-project-text"><span class="project-name">Распределительный
-                            газопровод</span><span class="projec-place">д.
-                            Большая Мось
-                            Фроловского сельского
-                            поселения</span><span class="project-width">14433
-                            метров</span></div>
-                    <div class="block-project-btn">
-                        <button class="btn-outline">Подробней</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="team">
-        <div class="container">
-            <h1 class="section-title animated animated-title h1">Наша команда
-            </h1>
-            <div class="d-flex
-                                                justify-content-between mtop-5 animated
+                                    <div class="team" id="team">
+                                        <div class="container">
+                                            <h1 class="section-title animated
+                                                animated-title h1">Наша команда
+                                            </h1>
+                                            <div class="d-flex
+                                                justify-content-between mtop-5
+                                                animated
                                                 team-animated-teamated">
-                <div class="teamated animated animated-right-mob" id="321">
-                    <div class="teamated-ava"></div>
-                    <div class="teamated-info">
-                        <div class="name">Куклин Александр Юрьевич</div>
-                        <div class="status">Заместитель Генерального Директора по строительству
-                        </div>
-                        <div class="botton"><button class="btn-outline clr-black">Контакты</button></div>
-                    </div>
-                </div>
+                                                <div class="teamated animated
+                                                    animated-right-mob"
+                                                    id="321">
+                                                    <div class="teamated-ava"></div>
+                                                    <div class="teamated-info">
+                                                        <div class="name">Куклин
+                                                            Александр Юрьевич</div>
+                                                        <div class="status">Заместитель
+                                                            Генерального
+                                                            Директора по
+                                                            строительству
+                                                        </div>
+                                                        <div class="botton"><button
+                                                                class="btn-outline
+                                                                clr-black">Контакты</button></div>
+                                                    </div>
+                                                </div>
 
-                <div class="teamated animated animated-right-mob" id="323">
-                    <div class="teamated-ava"></div>
-                    <div class="teamated-info">
-                        <div class="name">Трухин Игорь Витальевич</div>
-                        <div class="status">Генеральный директор
-                        </div>
-                        <div class="botton"><button class="btn-outline clr-black">Контакты</button></div>
-                    </div>
-                </div>
-                <div class="teamated animated animated-right-mob" id="322">
-                    <div class="teamated-ava"></div>
-                    <div class="teamated-info">
-                        <div class="name">Коробейникова Екатерина Григорьевна</div>
-                        <div class="status">Заместитель Генерального Директора
-                        </div>
-                        <div class="botton"><button class="btn-outline clr-black">Контакты</button></div>
-                    </div>
-                </div>
+                                                <div class="teamated animated
+                                                    animated-right-mob"
+                                                    id="323">
+                                                    <div class="teamated-ava"></div>
+                                                    <div class="teamated-info">
+                                                        <div class="name">Трухин
+                                                            Игорь Витальевич</div>
+                                                        <div class="status">Генеральный
+                                                            директор
+                                                        </div>
+                                                        <div class="botton"><button
+                                                                class="btn-outline
+                                                                clr-black">Контакты</button></div>
+                                                    </div>
+                                                </div>
+                                                <div class="teamated animated
+                                                    animated-right-mob"
+                                                    id="322">
+                                                    <div class="teamated-ava"></div>
+                                                    <div class="teamated-info">
+                                                        <div class="name">Коробейникова
+                                                            Екатерина
+                                                            Григорьевна</div>
+                                                        <div class="status">Заместитель
+                                                            Генерального
+                                                            Директора
+                                                        </div>
+                                                        <div class="botton"><button
+                                                                class="btn-outline
+                                                                clr-black">Контакты</button></div>
+                                                    </div>
+                                                </div>
 
-            </div>
+                                            </div>
 
-        </div>
-    </div>
+                                        </div>
+                                    </div>
 
-    <div class="work container">
-        <div class="row">
-            <div class="col-md-6 col-12 data-form animated animated-left pr-md-5">
-                <h1>Вакансии и новости</h1>
-                <div class="form-work ">
-                    <input type="email" placeholder="EMAIL">
-                    <button class="btn-red">Получить
-                        вакансии</button>
-                </div>
-                <div class="form-vakansi"><input type="email" placeholder="EMAIL">
-                    <button class="btn-red">Получить
-                        Новости</button>
-                </div>
-            </div>
-            <div class="col-md-6 d-none d-md-flex  img animated animated-right">
-                <img src="../static/img/work.png" width='200' height="200" alt="">
-            </div>
-        </div>
-    </div>
+                                    <div class="work container">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12
+                                                data-form animated animated-left
+                                                pr-md-5">
+                                                <h1>Вакансии и новости</h1>
+                                                <div class="form-work ">
+                                                    <input type="email"
+                                                        placeholder="EMAIL">
+                                                    <button class="btn-red">Получить
+                                                        вакансии</button>
+                                                </div>
+                                                <div class="form-vakansi"><input
+                                                        type="email"
+                                                        placeholder="EMAIL">
+                                                    <button class="btn-red">Получить
+                                                        Новости</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 d-none
+                                                d-md-flex img animated
+                                                animated-right">
+                                                <img
+                                                    src="../static/img/work.png"
+                                                    width='200' height="200"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
 
-    <div class="footer">
-        <div class="container">
-            <div><img src="../static/img/logo.png" height="85" alt=""></div>
-            <div class="row">
-                <div class="col-12 col-md-6 block-contacts">
-                    <div class="adres">Sara Tower, 23 Al Batrawi Street, 3rd Floor, Abbas El-Akkad, Nasr City, Cairo, Egypt
-                    </div>
-                    <div class="contacts">
-                        <span>+20222617124</span>
-                        <span>info@projex-tec.com</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 links">
-                    <span>О нас</span><span>Услуги</span><span>Наши
-                        проекты</span>
-                </div>
-            </div>
-        </div>
-    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div><img
+                                                    src="../static/img/logo.png"
+                                                    height="85" alt=""></div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6
+                                                    block-contacts">
+                                                    <div class="adres">Sara
+                                                        Tower, 23 Al Batrawi
+                                                        Street, 3rd Floor, Abbas
+                                                        El-Akkad, Nasr City,
+                                                        Cairo, Egypt
+                                                    </div>
+                                                    <div class="contacts">
+                                                        <span>+20222617124</span>
+                                                        <span>info@projex-tec.com</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6
+                                                    links">
+                                                    <span>О нас</span><span>Услуги</span><span>Наши
+                                                        проекты</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="menu-mob d-none">
+                                        <ul>
+                                            <li>
+                                                <a href="#about">О нас</a>
+                                            </li>
+                                            <li><a href="#service">Услуги</a></li>
+                                            <li><a href="#project">Наши проекты</a></li>
+                                            <li><a href="#team">Наша команда</a></li>
+                                        </ul>
+                                    </div>
 
-    </div>
+                                    <script
+                                        src="../node_modules/jquery/dist/jquery.min.js"></script>
+                                    <script
+                                        src="../static/plugin/animate-css.js"></script>
+                                    <script
+                                        src="../node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+                                    <script src="../static/js/index.js"></script>
+                                </body>
 
+                            </html>
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../static/plugin/animate-css.js"></script>
-    <script src="../node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="../static/js/index.js"></script>
-</body>
-
-</html>
-
-</html>
+                        </html>

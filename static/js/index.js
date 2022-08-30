@@ -129,4 +129,60 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     })
+
+    let sandwich = document.querySelector('.sandwich');
+    let menu = document.querySelector('.menu-mob');
+    //Создание меня для мобилки
+    document.querySelector('.navbar-toggler-custom').addEventListener('click', () => {
+        if (sandwich.classList.contains('active')) {
+            sandwich.classList.remove('active')
+            menu.classList.add('d-none');
+        } else {
+            sandwich.classList.add('active')
+            menu.classList.remove('d-none');
+        }
+    });
+
+    //Слушатель для сылку в меня для мобилок
+    menu.querySelectorAll('li').forEach(item => {
+        item.addEventListener('click', () => {
+            sandwich.classList.remove('active');
+            menu.classList.add('d-none');
+        })
+    })
+
+    //Слушатель для модалки
+    document.querySelectorAll('.block-project ').forEach(item => {
+        item.querySelector('.btn-outline').addEventListener('click', () => {
+            //Фон за модалкой
+            let bgModal = document.createElement('div');
+            bgModal.classList.add('modal-bg');
+            document.body.prepend(bgModal);
+
+            let wrap, container, content, body, btnClose;
+            wrap = document.createElement('div');
+            wrap.classList.add('modal-wrap');
+            container = document.createElement('div');
+            container.classList.add('modal-container');
+            content = document.createElement('div');
+            content.classList.add('modal-content');
+            body = document.createElement('div');
+            body.classList.add('modal-body');
+            btnClose = document.createElement('button');
+            btnClose.classList.add('btn-close');
+
+            body.append(btnClose);
+            content.append(body);
+            container.append(content);
+            wrap.append(container);
+
+            bgModal.after(wrap)
+
+            btnClose.addEventListener('click', () => {
+              bgModal.remove();
+              wrap.remove();  
+            })
+
+        })
+    })
 })
