@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/static/fonts/Ubuntu-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/static/fonts/Rubik-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Ubuntu";
+}
+
 .navbar {
   padding: 0;
   justify-content: space-between !important;
@@ -109,6 +125,9 @@
 .about {
   padding: 4rem;
 }
+.about h1 {
+  font-weight: bold;
+}
 .about img {
   width: 100%;
   max-height: 500px;
@@ -118,6 +137,7 @@
   margin: auto;
 }
 .about .block-desc li {
+  font-family: "Rubik";
   color: red;
 }
 .about .block-desc li span {
@@ -182,18 +202,19 @@
   background-color: white;
   max-width: 30%;
   position: relative;
+  font-family: "Rubik";
 }
 .team .teamated .teamated-info {
   padding: 5rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
 }
 .team .teamated .teamated-info .name {
   font-size: 24px;
   font-weight: 600;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 .team .teamated .teamated-info .status {
   font-size: 18px;
@@ -201,6 +222,9 @@
 }
 .team .teamated .teamated-info .botton {
   align-self: center;
+}
+.team .teamated .teamated-info * {
+  flex: 1 1;
 }
 
 .project {
@@ -226,6 +250,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Rubik";
 }
 .project .row [class*=col-] .block-project .block-project-text {
   z-index: 2;
@@ -323,8 +348,12 @@
 }
 
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
+  .navbar img {
+    width: 70%;
+    height: auto;
+  }
+  .navbar .navbar-toggler {
+    display: block;
   }
   .project {
     padding: 4rem 0 0 0;
