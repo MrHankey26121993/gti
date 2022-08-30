@@ -391,9 +391,6 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  .work {
-    padding: 3rem 0;
-  }
 }
 @media (min-width: 600px) {
   .team .teamated {
@@ -401,6 +398,9 @@ body {
   }
   .team .teamated .teamated-info {
     padding: 0 1rem 1rem 1rem;
+  }
+  .work {
+    padding: 3rem 0;
   }
 }
 

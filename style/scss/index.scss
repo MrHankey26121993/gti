@@ -413,9 +413,6 @@ body {
             }
         }
     }
-    .work {
-        padding: 3rem 0;
-    }
 }
 
 @media (min-width: 600px) {
@@ -426,5 +423,8 @@ body {
                 padding: 0 1rem 1rem 1rem;
             }
         }
+    }
+    .work {
+        padding: 3rem 0;
     }
 }
