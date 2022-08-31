@@ -1,4 +1,26 @@
+import Projects from './data.js';
 document.addEventListener('DOMContentLoaded', () => {
+
+    //Создание блоков с проектами
+    let rowProject = document.querySelector('.project').querySelector('.row');
+ //  let rowProject = document.querySelector('.project-test').querySelector('.row');
+    let modelProjects = new Projects();
+
+    modelProjects.getProjects().forEach(project => {
+        let col = document.createElement('div');
+        col.classList.add('col-12', 'col-md-3', 'animated', 'animated-left-mob');
+        rowProject.append(col);
+        let blockProject = `<div id="${project.id}" class="block-project">
+                                <div class="block-project-text">
+                                    <span class="project-name">${project.name}</span>
+                                    <span class="projec-place">${project.place}</span>
+                                    <span class="project-width">${project.width}</span></div>
+                                <div class="block-project-btn">
+                                        <button class="btn-outline">Подробнее</button>
+                            </div>`;
+        col.innerHTML = blockProject;
+
+    });
 
     let bodyWidth = document.querySelector('body').clientWidth;
 
@@ -152,35 +174,38 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     //Слушатель для модалки
-    document.querySelectorAll('.block-project ').forEach(item => {
+    document.querySelectorAll('.block-project').forEach(item => {
         item.querySelector('.btn-outline').addEventListener('click', () => {
             //Фон за модалкой
             let bgModal = document.createElement('div');
             bgModal.classList.add('modal-bg');
             document.body.prepend(bgModal);
 
-            let wrap, container, content, body, btnClose;
-            wrap = document.createElement('div');
-            wrap.classList.add('modal-wrap');
-            container = document.createElement('div');
-            container.classList.add('modal-container');
-            content = document.createElement('div');
-            content.classList.add('modal-content');
-            body = document.createElement('div');
-            body.classList.add('modal-body');
-            btnClose = document.createElement('button');
-            btnClose.classList.add('btn-close');
+            let project = modelProjects.getProjectById(item.id);
+            console.log(project);
 
-            body.append(btnClose);
-            content.append(body);
-            container.append(content);
-            wrap.append(container);
+            let modal = `<div class="modal-container-custom">
+                            <div class="modal-content-custom">
+                                <div class="modal-body-custom">
+                                    <button class="btn-close"></button>
+                                    <h4 class="modal-title">${project.name}</h4>
+                                    <p class="modal-desc">${project.place}</p>
+                                    <p class="modal-desc">${project.width}</p>
+                                    <img src="${project.img}" class="modal-img">
+                                </div>
+                            </div>
+                        </div>`;
+
+            let wrap = document.createElement('div');
+            wrap.classList.add('modal-wrap');
+
+            wrap.innerHTML = modal;
 
             bgModal.after(wrap)
 
-            btnClose.addEventListener('click', () => {
-              bgModal.remove();
-              wrap.remove();  
+            wrap.querySelector('.btn-close').addEventListener('click', () => {
+                bgModal.remove();
+                wrap.remove();
             })
 
         })
