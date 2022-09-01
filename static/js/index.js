@@ -14,10 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div class="block-project-text">
                                     <span class="project-name">${project.name}</span>
                                     <span class="projec-place">${project.place}</span>
-                                    <span class="project-width">${project.width}</span></div>
-                                <div class="block-project-btn">
-                                        <button class="btn-outline">Подробнее</button>
-                            </div>`;
+                                    <span class="project-width">${project.width}</span>
+                                </div>`;
         col.innerHTML = blockProject;
 
     });
