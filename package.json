@@ -2,18 +2,21 @@
     "name": "gti",
     "version": "1.0.0",
     "private": true,
-    "type": "module",
     "dependencies": {
-        "@splidejs/splide": "github:splidejs/splide",
         "animate.css": "^4.1.1",
         "bootstrap": "^5.1.2",
         "core-js": "^3.15.1",
-        "jquery": "^3.6.1",
-        "waypoints": "^4.0.1"
+        "html-webpack-plugin": "^5.5.0"
+    },
+    "scripts": {
+        "build": "webpack --config webpack.dev.js"
     },
     "devDependencies": {
         "@nuxtjs/style-resources": "^1.2.1",
         "node-sass": "^6.0.1",
-        "sass-loader": "^10.1.1"
+        "raw-loader": "^4.0.2",
+        "sass-loader": "^10.1.1",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0"
     }
 }
