@@ -1,9 +1,9 @@
 import Projects from './data.js';
 document.addEventListener('DOMContentLoaded', () => {
-
+    let btnSLider = document.querySelector('.btn-slider');
     //Создание блоков с проектами
     let rowProject = document.querySelector('.project').querySelector('.row');
- //  let rowProject = document.querySelector('.project-test').querySelector('.row');
+    //  let rowProject = document.querySelector('.project-test').querySelector('.row');
     let modelProjects = new Projects();
 
     modelProjects.getProjects().forEach(project => {
@@ -166,46 +166,65 @@ document.addEventListener('DOMContentLoaded', () => {
     //Слушатель для сылку в меня для мобилок
     menu.querySelectorAll('li').forEach(item => {
         item.addEventListener('click', () => {
+            if (item.classList.contains('not-link')) {
+                btnSLider.click();
+            }
             sandwich.classList.remove('active');
             menu.classList.add('d-none');
         })
     })
 
-    //Слушатель для модалки
-    document.querySelectorAll('.block-project').forEach(item => {
-        item.querySelector('.btn-outline').addEventListener('click', () => {
+
+    document.querySelectorAll('.btn-slider').forEach(item => {
+        item.addEventListener('click', () => {
             //Фон за модалкой
             let bgModal = document.createElement('div');
             bgModal.classList.add('modal-bg');
             document.body.prepend(bgModal);
 
-            let project = modelProjects.getProjectById(item.id);
-            console.log(project);
+            bgModal.innerHTML = `<div class="slider">
+                                    <div class="slider-close">X</div>
+                                    <div class="slider__wrapper">
+                                        <div class="slider__items">
+                                            <div class="slider__item">
+                                                <div>
+                                                    <img src="static/img/lic1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="slider__item">
+                                                <div>
+                                                    <img src="static/img/lic2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="slider__item">
+                                                <div>
+                                                    <img src="static/img/lic3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="slider__item">
+                                                <div>
+                                                    <img src="static/img/lic4.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="slider__item">
+                                                <div>
+                                                    <img src="static/img/lic5.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                                    <button class="slider__control" data-slide="prev"></button>
+                                    <button class="slider__control" data-slide="next"></button>
+                                </div>`;
 
-            let modal = `<div class="modal-container-custom">
-                            <div class="modal-content-custom">
-                                <div class="modal-body-custom">
-                                    <button class="btn-close"></button>
-                                    <h4 class="modal-title">${project.name}</h4>
-                                    <p class="modal-desc">${project.place}</p>
-                                    <p class="modal-desc">${project.width}</p>
-                                    <img src="${project.img}" class="modal-img">
-                                </div>
-                            </div>
-                        </div>`;
-
-            let wrap = document.createElement('div');
-            wrap.classList.add('modal-wrap');
-
-            wrap.innerHTML = modal;
-
-            bgModal.after(wrap)
-
-            wrap.querySelector('.btn-close').addEventListener('click', () => {
-                bgModal.remove();
-                wrap.remove();
+            bgModal.querySelector('.slider-close').addEventListener('click', () => {
+                bgModal.remove()
             })
 
-        })
+            new ItcSlider('.slider');
+
+
+        });
     })
 })

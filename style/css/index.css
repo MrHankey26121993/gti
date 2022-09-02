@@ -32,54 +32,23 @@ body .modal-bg {
   z-index: 1500;
   overflow: hidden;
 }
-body .modal-wrap {
-  width: 100%;
-  height: 100%;
-  position: fixed;
+body .slider .slider-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   z-index: 1501;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-body .modal-wrap .modal-container-custom {
-  position: absolute;
+body .slider img {
   width: 100%;
-  height: 100%;
-  padding: 0 8px;
+  height: 80vh;
 }
-body .modal-wrap .modal-container-custom .modal-content-custom {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 auto;
-  text-align: left;
-  z-index: 1502;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custom {
-  background-color: #fff;
-  max-width: 500px;
-  font-family: "Rubik";
-  position: relative;
-}
-body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custom .btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-}
-body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custom .modal-img {
-  width: 100%;
-}
-body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custom .modal-title {
-  font-weight: 400;
-  padding: 20px;
-  text-align: center;
-  font-family: "Ubuntu Light";
-}
-body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custom .modal-desc {
-  padding: 0 20px;
-  color: #888;
+
+.btn-slider {
+  cursor: pointer;
 }
 
 .navbar {
@@ -108,6 +77,14 @@ body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custo
   line-height: 16px;
   color: white;
   font-weight: 500;
+}
+
+a.btn-red {
+  text-decoration: none;
+}
+
+a.btn-red:hover {
+  color: #fff;
 }
 
 .btn-outline {
@@ -485,8 +462,10 @@ body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custo
 .footer .row .block-contacts .contacts {
   font-size: 14px;
 }
-.footer .row .links span {
-  display: block;
+.footer .row .links ul {
+  list-style: none;
+}
+.footer .row .links ul li {
   padding-bottom: 1%;
 }
 
@@ -504,7 +483,8 @@ body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custo
   text-align: center;
   margin-top: 180px;
 }
-.menu-mob ul li a {
+.menu-mob ul li a,
+.menu-mob ul li span {
   color: #fff;
   display: block;
   text-transform: uppercase;
@@ -642,8 +622,14 @@ body .modal-wrap .modal-container-custom .modal-content-custom .modal-body-custo
     padding-bottom: 5%;
   }
   .footer .row .links {
-    display: flex;
-    justify-content: space-between;
+    padding: 0;
+  }
+  .footer .row .links ul {
+    padding-left: 0;
+  }
+  .footer .row .links ul li {
+    display: inline-block;
+    padding: 0 5px;
   }
 }
 @media (min-width: 600px) {
