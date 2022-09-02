@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let modelProjects = new Projects();
 
     modelProjects.getProjects().forEach(project => {
+
         let col = document.createElement('div');
         col.classList.add('col-12', 'col-md-3', 'animated', 'animated-left-mob');
         rowProject.append(col);
@@ -15,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <span class="project-name">${project.name}</span>
                                     <span class="projec-place">${project.place}</span>
                                     <span class="project-width">${project.width}</span>
-                                </div>`;
+                                </div>
+                            </div>`;
+
         col.innerHTML = blockProject;
 
     });
