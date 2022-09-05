@@ -230,4 +230,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
     })
+
+    document.addEventListener('scroll', () => {
+        checkScroll();
+    })
+
+    checkScroll();
+
 })
+
+function checkScroll() {
+    let btn = document.querySelector('.arrow-top');
+    if (window.pageYOffset > 95) {
+        if (btn.classList.contains('d-none')) {
+            btn.classList.remove('d-none');
+        }
+    } else {
+        if (!btn.classList.contains('d-none')) {
+            btn.classList.add('d-none');
+        }
+    }
+}

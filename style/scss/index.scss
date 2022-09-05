@@ -243,6 +243,7 @@ a.btn-red:hover {
 .team {
     background-color: #131d3b;
     padding: 3rem 0;
+    overflow-x: hidden;
     .section-title {
         color: white;
         text-align: center;
@@ -380,71 +381,29 @@ a.btn-red:hover {
     }
 }
 
-.project-test {
-    padding: 3rem 5% 3rem 5%;
-    h1 {
-        color: black;
-        text-align: center;
-    }
-    .row {
-        margin: auto;
-        [class*="col-"] {
-            padding-right: 0;
-            padding-left: 0;
-            position: relative;
-            .block-project {
-                min-height: 300px;
-                background-size: cover;
-                z-index: 0;
-                * {
-                    display: none;
-                }
-            }
-            #first-project {
-                background-image: url("../../static/img/first.jpg");
-            }
-            #second-project {
-                background-image: url("../../static/img/second.jpg");
-            }
-            #third-project {
-                background-image: url("../../static/img/third.jpg");
-            }
-            #fourth-project {
-                background-image: url("../../static/img/fourth.jpg");
-            }
-        }
-        [class*="col-"]:after {
-            content: "";
-            background: rgba(0, 0, 0, 0.7); // фон с прозрачностью 70%
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            opacity: 0;
-        }
-        [class*="col-"]:hover {
-            opacity: 1;
-        }
-    }
-}
-
 .work {
     padding: 3rem;
     .data-form {
-        [class*="form-"] {
-            input {
-                margin-top: 50px;
-                height: 50px;
-                border-radius: 0;
-                border: solid 1px #dcdfe3;
-                padding-left: 15px;
+        form {
+            label {
+                letter-spacing: 3px;
+                color: rgba(0, 0, 0, 0.55);
+                display: grid;
+                margin-bottom: 20px;
+                input,
+                textarea {
+                    margin-top: 5px;
+                    line-height: 40px;
+                    border-radius: 0;
+                    border: solid 1px #dcdfe3;
+                    padding-left: 15px;
+                }
             }
             button {
                 margin-top: 20px;
                 display: block;
+                text-transform: uppercase;
+                letter-spacing: 3px;
             }
         }
     }
@@ -456,29 +415,44 @@ a.btn-red:hover {
             object-fit: cover;
         }
     }
+    .info_contact {
+        display: block;
+        margin-bottom: 30px;
+        .icon {
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        p {
+            color: rgba(0, 0, 0, 0.55);
+        }
+    }
 }
 
 .footer {
     background-color: #131d3b;
-    padding: 3rem;
+    padding: 1.5rem;
     color: white;
     .row {
+        [class*="col-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
         .block-contacts {
-            padding-left: 105px;
+            align-self: center;
+            justify-content: center;
             .adres {
                 max-width: 50%;
                 font-size: 16px;
                 padding-bottom: 5%;
             }
             .contacts {
-                font-size: 14px;
-            }
-        }
-        .links {
-            ul {
-                list-style: none;
-                li {
-                    padding-bottom: 1%;
+                span {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
                 }
             }
         }
@@ -512,6 +486,19 @@ a.btn-red:hover {
             }
         }
     }
+}
+
+.arrow-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    content: "";
+    border-radius: 50%;
+    border: 1px solid red;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px rgb(255 0 0);
+    background: white;
+    z-index: 1503;
 }
 
 @media (max-width: 600px) {
@@ -595,15 +582,27 @@ a.btn-red:hover {
             margin-right: 0;
             padding-left: 0;
             padding-right: 0;
-        }
-    }
-    .project-test {
-        padding: 2rem 0 0 0;
-        .row {
-            margin-left: 0;
-            margin-right: 0;
-            padding-left: 0;
-            padding-right: 0;
+            .block-project-text {
+                z-index: 2;
+                span {
+                    display: block;
+                    color: white;
+                }
+                .project-name {
+                    font-size: 20px !important;
+                    font-weight: 500;
+                    padding-bottom: 2%;
+                }
+                .projec-place {
+                    padding: 2% 0;
+                    font-size: 14px !important;
+                    border-bottom: solid 1px #6c757d;
+                }
+                .project-width {
+                    padding-top: 2%;
+                    font-size: 16px !important;
+                }
+            }
         }
     }
     .service {
@@ -668,5 +667,41 @@ a.btn-red:hover {
     }
     .work {
         padding: 3rem 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .project {
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        .row {
+            [class*="col-"] {
+                .block-project {
+                    .block-project-text {
+                        z-index: 2;
+                        span {
+                            display: block;
+                            color: white;
+                        }
+                        .project-name {
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding-bottom: 2%;
+                        }
+                        .projec-place {
+                            padding: 2% 0;
+                            font-size: 12px;
+                            border-bottom: solid 1px #6c757d;
+                        }
+                        .project-width {
+                            padding-top: 2%;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
