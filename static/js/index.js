@@ -237,6 +237,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkScroll();
 
+    document.querySelector('.arrow-top').addEventListener('click', () => {
+        document.body.scrollIntoView();
+    });
+
+
 })
 
 function checkScroll() {
