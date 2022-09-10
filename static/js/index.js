@@ -124,15 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
             widthMain = item.clientWidth;
             heightMain = widthMain;
         }
-        item.style.width = widthMain + 'px';
-        item.style.height = widthMain + 'px';
+    //    item.style.width = widthMain + 'px';
+     //   item.style.height = widthMain + 'px';
         let ava = item.querySelector('.teamated-ava');
         ava.style.position = 'absolute';
         let avaWidth = widthMain - (widthMain / 100 * 50)
         ava.style.width = avaWidth + 'px'; //Ширина 50% от общей ширины элемента
         ava.style.height = ava.style.width;
         ava.style.borderRadius = '50%';
-        ava.style.backgroundImage = `url(../../static/img/${item.id}.jpg)`;
+        ava.style.backgroundImage = `url(../static/img/${item.id}.jpg)`;
         ava.style.backgroundSize = 'cover';
         ava.style.backgroundPosition = 'center';
         ava.style.left = (widthMain - avaWidth) / 2 + 'px';
@@ -240,6 +240,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.arrow-top').addEventListener('click', () => {
         document.body.scrollIntoView();
     });
+
+    document.querySelectorAll('.botton').forEach(item => {
+        let btm =  item.querySelector('button');
+        btm.addEventListener('click', () => {
+            let email = item.previousElementSibling;
+            if(!email.classList.contains('active')) {
+                email.classList.add('active');
+                email.previousElementSibling.classList.remove('active');
+            } else {
+                email.classList.remove('active');
+                email.previousElementSibling.classList.add('active');
+            }
+
+        });
+    })
 
 
 })

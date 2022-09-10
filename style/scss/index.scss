@@ -252,6 +252,9 @@ a.btn-red:hover {
         color: white;
         border-bottom: 1px solid white;
     }
+    .row {
+        justify-content: space-between;
+    }
     .teamated {
         background-color: white;
         max-width: 30%;
@@ -270,11 +273,28 @@ a.btn-red:hover {
                 padding: 10px 0;
             }
             .status {
+                display: none;
                 font-size: 14px;
                 padding-bottom: 10px;
             }
+            .email {
+                display: none;
+                opacity: 0;
+            }
+            .email.active{
+                opacity: 1;
+                transition: all 0.5s;
+            }
+            .active {
+                display: block;
+            }
             .botton {
                 align-self: center;
+                cursor: pointer;
+                button:hover, button:active {
+                    background-color: red;
+                    color: white;
+                }
             }
             * {
                 flex: 1 1;
@@ -315,7 +335,7 @@ a.btn-red:hover {
                         color: white;
                     }
                     .project-name {
-                        font-size: 20px;
+                        font-size: 18px;
                         font-weight: 500;
                         padding-bottom: 2%;
                     }

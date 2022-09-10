@@ -248,6 +248,9 @@ a.btn-red:hover {
   color: white;
   border-bottom: 1px solid white;
 }
+.team .row {
+  justify-content: space-between;
+}
 .team .teamated {
   background-color: white;
   max-width: 30%;
@@ -267,11 +270,28 @@ a.btn-red:hover {
   padding: 10px 0;
 }
 .team .teamated .teamated-info .status {
+  display: none;
   font-size: 14px;
   padding-bottom: 10px;
 }
+.team .teamated .teamated-info .email {
+  display: none;
+  opacity: 0;
+}
+.team .teamated .teamated-info .email.active {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.team .teamated .teamated-info .active {
+  display: block;
+}
 .team .teamated .teamated-info .botton {
   align-self: center;
+  cursor: pointer;
+}
+.team .teamated .teamated-info .botton button:hover, .team .teamated .teamated-info .botton button:active {
+  background-color: red;
+  color: white;
 }
 .team .teamated .teamated-info * {
   flex: 1 1;
@@ -314,7 +334,7 @@ a.btn-red:hover {
   color: white;
 }
 .project .row [class*=col-] .block-project .block-project-text .project-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   padding-bottom: 2%;
 }
